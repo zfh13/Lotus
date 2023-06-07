@@ -1,5 +1,6 @@
 package locus.server.model.entity;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class VisitStatistics {
@@ -17,7 +18,7 @@ public class VisitStatistics {
 
     private Long version;
 
-    private Date statisticsDate;
+    private LocalDate statisticsDate;
 
     private Long pvCount;
 
@@ -91,11 +92,11 @@ public class VisitStatistics {
         this.version = version;
     }
 
-    public Date getStatisticsDate() {
+    public LocalDate getStatisticsDate() {
         return statisticsDate;
     }
 
-    public void setStatisticsDate(Date statisticsDate) {
+    public void setStatisticsDate(LocalDate statisticsDate) {
         this.statisticsDate = statisticsDate;
     }
 

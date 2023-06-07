@@ -741,4 +741,12 @@
       long_url_digest = #{longUrlDigest,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="selectByUniqueKey" resultMap="BaseResultMap">
+    select *  from visit_statistics
+    where statistics_date = #{statisticsDate}
+    AND   compression_code = #{compressionCode}
+    AND   short_url_digest = #{shortUrlDigest}
+    AND   long_url_digest  = #{longUrlDigest}
+  </select>
 </mapper>
